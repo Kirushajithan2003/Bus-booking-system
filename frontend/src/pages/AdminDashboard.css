@@ -1,0 +1,57 @@
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 2px solid transparent;
+}
+.tab-btn:hover { color: var(--text-primary); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.stat-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-label { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; }
+.stat-value { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+
+.admin-form { padding: 24px; }
+.admin-form h3 { margin-bottom: 16px; font-size: 1.1rem; }
+
+.admin-table { padding: 0; overflow-x: auto; }
+.admin-table table { width: 100%; border-collapse: collapse; }
+.admin-table th { background: var(--bg-card); text-align: left; padding: 12px 16px; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+.admin-table td { padding: 12px 16px; border-top: 1px solid var(--border); font-size: 0.9rem; }
+.admin-table tr:hover { background: var(--bg-card-hover); }
+
+.text-red { background: none; border: none; color: var(--red); cursor: pointer; font-size: 0.85rem; }
+.text-red:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .admin-grid { grid-template-columns: 1fr; }
+}

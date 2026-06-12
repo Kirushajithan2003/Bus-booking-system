@@ -1,0 +1,91 @@
+.confirm-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.step span {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.step.done { color: var(--green); }
+.step.done span { border-color: var(--green); background: var(--green-light); color: var(--green); }
+.step.active { color: var(--accent); }
+.step.active span { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+.step-line { flex: 1; height: 2px; background: var(--border); min-width: 24px; border-radius: 99px; }
+.step-line.done { background: var(--green); }
+
+.confirm-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Passenger Card */
+.passenger-card {
+  padding: 22px;
+  margin-bottom: 16px;
+}
+.passenger-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.seat-badge-lg {
+  background: var(--accent-light);
+  border: 1px solid var(--border-active);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.passenger-card-header h3 { font-size: 1rem; font-weight: 700; }
+.passenger-form { display: flex; flex-direction: column; gap: 14px; }
+.pax-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Order Summary */
+.order-summary-panel { position: sticky; top: 90px; }
+.order-summary { padding: 24px; }
+.order-summary h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+.order-route { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.order-city { font-size: 1rem; font-weight: 700; }
+.order-arrow { color: var(--accent); }
+.order-detail { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 4px; }
+
+.confirm-btn { width: 100%; margin-top: 4px; }
+.secure-msg { text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 10px; }
+.text-green { color: var(--green); }
+.text-muted { color: var(--text-muted); font-size: 0.82rem; }
+
+.contact-info { font-size: 0.85rem; margin: 4px 0; }
+.contact-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 4px; }
+
+@media (max-width: 860px) {
+  .confirm-layout { grid-template-columns: 1fr; }
+  .order-summary-panel { position: static; }
+}
